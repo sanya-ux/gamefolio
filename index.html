@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanya Shankar — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200..800&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="projects/favicon.png">
+</head>
+
+<body>
+
+  <!-- THEME TOGGLE -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-spacer"></div>
+        <div class="header-name">
+          <h1>Sanya Shankar</h1>
+          <p>Design with purpose, Build with creativity.</p>
+        </div>
+        <a href="sanya.shankar96@gmail.com" class="btn-contact">
+          <span class="btn-text">Get in <span class="btn-text-accent">Touch</span></span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m2 7 10 7 10-7" />
+          </svg>
+        </a>
+      </div>
+
+      <nav>
+        <div class="nav-inner">
+          <a href="#" class="nav-link active" data-tab="work">Work</a>
+          <span class="nav-sep">/</span>
+          <a href="#" class="nav-link" data-tab="art">Art</a>
+          <span class="nav-sep">/</span>
+          <a href="#" class="nav-link" data-tab="about">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN GRID -->
+  <main>
+    <div class="container">
+      <!-- Work Tab -->
+      <div class="tab-content" id="tab-work">
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Projects will be loaded dynamically from data/projects/ -->
+        </div>
+
+        <!-- Essays Section (rendered dynamically from data/projects.js) -->
+        <section class="essays-section">
+          <h2 class="essays-heading">Essays</h2>
+          <hr class="essays-divider" />
+          <div class="essays-list"></div>
+        </section>
+      </div>
+
+      <!-- Art Tab -->
+      <div class="tab-content" id="tab-art" style="display: none;">
+        <!-- Fourth carousel row -->
+        <div class="art-carousel-wrapper">
+          <div class="art-carousel-info">
+            <h2 class="art-carousel-title">Sketches</h2>
+            <!--<p class="art-carousel-description">Sketches, thumbnails and explorations</p>-->
+          </div>
+          <div class="art-carousel-track" id="artCarouselTrack4">
+            <!-- Carousel slides will be loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- First carousel row -->
+        <div class="art-carousel-wrapper">
+          <div class="art-carousel-info">
+            <h2 class="art-carousel-title" id="artCarouselTitle1">Game Art</h2>
+            <!--<p class="art-carousel-description" id="artCarouselDesc1">Concept Art, character design and studies</p>-->
+          </div>
+          <div class="art-carousel-track" id="artCarouselTrack1">
+            <!-- Carousel slides will be loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- Second carousel row -->
+        <div class="art-carousel-wrapper">
+          <div class="art-carousel-info">
+            <h2 class="art-carousel-title" id="artCarouselTitle2">Environment Design</h2>
+            <!--p class="art-carousel-description" id="artCarouselDesc2">Artwork description goes herex</p>-->
+          </div>
+          <div class="art-carousel-track" id="artCarouselTrack2">
+            <!-- Carousel slides will be loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- Third carousel row -->
+        <div class="art-carousel-wrapper">
+          <div class="art-carousel-info">
+            <h2 class="art-carousel-title" id="artCarouselTitle3">Illustrations</h2>
+            <!--<p class="art-carousel-description" id="artCarouselDesc3">Artwork description goes here</p>-->
+          </div>
+          <div class="art-carousel-track" id="artCarouselTrack3">
+            <!-- Carousel slides will be loaded dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <!-- About Tab -->
+      <div class="tab-content" id="tab-about" style="display: none;">
+        <div class="about-layout">
+          <div class="about-photo">
+            <div class="about-photo-inner">
+              <img src="art/sketches/vert10.jpg" alt="Portrait of Sanya Shankar" loading="lazy" />
+            </div>
+          </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+              Designer based in New Delhi specializing in UI/UX Design, Game Design and Visual Communication.
+            </p>
+            <p>
+              My bachelors is in Fine Arts from College of Art, New Delhi under Applied Art department (commercial art
+              and advertisement). I did my masters in Design (XR Design) from School of Design, IIT Jodhpur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <img class="footer-logo" src="images/sny-logo.png" alt="Sanya Shankar logo" loading="lazy" />
+        <h3>Sanya Shankar</h3>
+        <div class="footer-socials">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/sanya-shankar-bb2ab5201/" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <div class="modal-controls">
+        <button class="modal-btn" id="modalClose" title="Close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-blocks" id="modalBlocks"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTWORK OVERLAY -->
+  <div class="art-overlay-backdrop" id="artOverlayBackdrop">
+    <div class="art-overlay">
+      <div class="art-overlay-inner">
+        <img id="artOverlayImage" src="" alt="" />
+      </div>
+      <button class="art-overlay-close" id="artOverlayClose" title="Close" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="data/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
