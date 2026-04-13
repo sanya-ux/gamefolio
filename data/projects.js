@@ -15,129 +15,6 @@
 
 const projects = {
 
-  doromind: {
-    id: 'doromind',
-    title: 'DoroMind — Productivity App Redesign',
-    hoverTitle: 'Productivity App | UX Design',
-    timeline: '2026',
-    keywords: 'UX Design, Pomodoro Timer',
-    softwares: 'Figma',
-    //tagline: 'Small habits, big clarity',
-    cover: 'images/doromind.jpg',
-    content: [
-      { type: 'centertext', level: 2, text: 'This project is an exploration of calm productivity, enabling students to plan, focus, and reflect on their effort through a minimal and supportive interface.' },
-      { type: 'image', src: 'projects/doromind/images/doro 11.jpg' },
-      { type: 'quote', text: 'The intent was to rework both function and aesthetic to improve clarity, usability, and long-term engagement.' },
-      //{ type: 'heading', level: 3, text: 'The Challenge' },
-      { type: 'spacing', space: 16 },
-      { type: 'card', class: 'color-doro', title: 'The Challenge', text: 'Design a focused, low-friction Pomodoro experience that helps students manage long study hours, plan tasks ahead, and stay motivated—without overwhelming them.' },
-      // { type: 'heading', text: 'Product Strategy' },
-      { type: 'card', class: 'color-doro', title: 'Product Strategy', text: 'Prioritize quick entry into focus sessions, meaningful task organization, and motivation through subtle rewards—balancing productivity with mental ease.' },
-      { type: 'spacing', space: 16 },
-      { type: 'image', src: 'projects/doromind/images/doro 8.jpg' },
-      //{ type: 'paragraph', text: 'We chose soft, calming colors to evoke tranquility.' },
-      { type: 'gallery2', images: ['projects/doromind/images/doro 12.jpg', 'projects/doromind/images/doro 9.jpg'], columns: 2 },
-      { type: 'heading', text: 'Key Features' },
-      {
-        type: 'list', ordered: false, items: [
-          'Focused Sessions- Minimal & focused UI',
-          'Actionable Task Cards- Complete, move, delete, filter',
-          'Progress Insights- Clear daily & weekly tracking',
-          'Streaks to build Build consistency',
-          'Gentle motivation & realistic daily targets',
-          'White Noise — Distraction-free focus'
-        ]
-      },
-      { type: 'spacing', space: 16 },
-      { type: 'centertext', text: 'Research and interviews revealed that students struggle to plan weekly tasks and track long study hours. Existing apps either lack depth or overload users with features, reducing long-term engagement.' },
-      { type: 'spacing', space: 16 },
-      { type: 'image', src: 'projects/doromind/images/user flow.png' },
-      { type: 'image', src: 'projects/doromind/images/user persona.jpg' },
-      { type: 'image', src: 'projects/doromind/images/design guide.png' },
-      { type: 'spacing', space: 16 },
-      { type: 'heading', text: 'Design Consistency' },
-      { type: 'paragraph', text: 'A dark, minimal palette paired with a calm visual hierarchy reduces cognitive load and keeps the interface effortless, distraction-free, and easy to return to.' },
-      { type: 'image', src: 'projects/doromind/images/doro 3.jpg' },
-      { type: 'image', src: 'projects/doromind/images/doro 14.jpg' },
-      { type: 'spacing', space: 32 },
-      { type: 'gallery2', images: ['projects/doromind/images/doro 6.jpg', 'projects/doromind/images/doro 5.jpg'], columns: 2 },
-      { type: 'centertext', text: 'The analytics screen delivers meaningful daily and weekly focus insights for realistic self-tracking, while the task list uses priority-based, action-driven cards to support structured and flexible planning.' },
-      { type: 'image', src: 'projects/doromind/images/doro 4.jpg' },
-      { type: 'image', src: 'projects/doromind/images/doro 2.jpg' }, { type: 'gallery2', images: ['projects/doromind/images/doro 13.png', 'projects/doromind/images/doro 10.jpg'], columns: 2 },
-      // { type: 'quote', text: 'The new identity feels both timeless and fresh.', author: 'CEO, Doromind' },
-      { type: 'spacing', space: 16 },
-      { type: 'centerheading', text: 'Focus, designed with restraint.' },
-      { type: 'spacing', space: 64 }
-    ]
-  },
-
-  threadspace: {
-    id: 'threadspace',
-    title: 'ThreadSpace — VR Prototyping',
-    hoverTitle: 'VR Prototyping',
-    timeline: '2024',
-    keywords: 'Instructional Design, Virtual Reality',
-    softwares: 'Figma, Blender',
-    //tagline: 'Upcycle, stitch, and style— give your old clothes a second chance',
-    image: 'images/threadspace.jpg',
-    description: 'ThreadSpace is a VR experience that reimagines how people engage with upcycling and textile crafts. Users step into an immersive workshop environment where they can stitch, cut, and redesign garments using intuitive hand-tracked interactions. The project explores how spatial computing can make sustainable fashion accessible and joyful.',
-    content: [
-      { type: 'quote', text: 'Upcycle, stitch, and style- give your old clothes a second chance' },
-      { type: 'image', src: 'projects/threadspace/images/tscoverlight.jpg' },// caption: 'Early interface sketches' },
-      { type: 'centerheading', text: 'An intuitive, immersive environment for players to explore sewing basics, select tools, and create custom items like wrist warmers and much more.' },
-      { type: 'spacing', space: 16 },
-      { type: 'imagestretch', src: 'projects/threadspace/images/designprocess.jpg' },// caption: 'Early interface sketches' },      
-      { type: 'spacing', space: 32 },
-      { type: 'card', class: 'color-threadsp', title: 'Problem Space', text: 'Learning to sew shouldn’t feel like watching from the sidelines. Yet most platforms reduce making to steps on a screen.' },
-      { type: 'spacing', space: 16 },
-      { type: 'heading', level: 3, text: 'Bridging the Gaps' },
-      {
-        type: 'list', ordered: false, items: ['Expanding beyond basic projects with a diverse range of creative, meaningful upcycling experiences.',
-          'Embedding sustainability at the core- not as a feature, but as a philosophy.',
-          'Replacing rigid, passive instructions with immersive, hands-on control and guided interaction.',
-          'Delivering contextual tips in real time to support confident making.'
-        ]
-      },
-      { type: 'spacing', space: 16 },
-      { type: 'image', src: 'projects/threadspace/images/moodboard.jpg', caption: 'Moodboard & Environment Design Reference' },
-      { type: 'spacing', space: 16 },
-      { type: 'heading', text: 'Inside the Experience' },
-      {
-        type: 'list', ordered: false, items: [
-
-          'Hands-On Foundations - Learn essential skills like cutting, stitching, and thread matching through guided, interactive practice — not passive watching.',
-          'Playful Tool Exploration- Experiment with needles, stitch types, and materials in a safe, exploratory environment.',
-          'Project-Based Learning- Create functional pieces such as mini oven mitts, coin pouches, wrist warmers, and beyond.',
-          'Immersive Studio Desk- Work within a cozy, interactive sewing space designed to feel tactile and grounded.',
-          'Progressive Skill Building- Gradually unlock advanced creations like patchwork buckets and fabric trays as your confidence grows.',]
-      },
-
-      { type: 'spacing', space: 16 },
-      { type: 'imagebig', src: 'projects/threadspace/images/taskflow.jpg' },
-      { type: 'spacing', space: 32 },
-      { type: 'imagebig', src: 'projects/threadspace/images/IA.jpg', caption: 'Information Architecture' },
-      { type: 'spacing', space: 48 },
-      { type: 'imagebig', src: 'projects/threadspace/images/wireframing.png', caption: 'Wireframing' },
-      { type: 'spacing', space: 32 },
-      { type: 'imagebig', src: 'projects/threadspace/images/UI Kit.png' },
-      { type: 'spacing', space: 16 },
-      { type: 'gallery2', images: ['projects/threadspace/images/VR Guidelines.jpg', 'projects/threadspace/images/environment.jpg'], columns: 2 },
-      { type: 'centertext', text: 'The VR layout follows a clear spatial grid, positioning key elements within comfortable viewing zones for intuitive interaction. A diegetic desk workspace sits at torso level, with tools placed upfront, projects slightly to the right, and the guiding avatar gently positioned to the left- creating a balanced and immersive making environment.' },
-      { type: 'imagemedium', src: 'projects/threadspace/images/avatar.jpg', caption: '3D Avatar Design in Blender' },
-      { type: 'centerheading', text: 'Microinteractions' },
-      { type: 'centertext', text: 'Every action responds — from subtle haptic cues to visual highlights that affirm correct movements. Small feedback moments transform each step into a satisfying, confidence-building win.' },
-      { type: 'imagemedium', src: 'projects/threadspace/images/HE.jpg', caption: 'Usability Evaluation' },
-      { type: 'centerheading', text: 'Video Prototype' },
-      //{type: 'video', src: 'projects/threadspace/images/ts_vid.mp4' },
-      {
-        type: 'youtube',
-        src: 'https://www.youtube.com/embed/GN2DhsocK5g?si=IxPScbYoN542w47B'
-      },
-      { type: 'spacing', space: 32 },
-      { type: 'centerheading', text: 'Immersive Making, Reimagined' },
-      { type: 'spacing', space: 64 }
-    ]
-  },
 
   Roopro: {
     id: 'Roopro',
@@ -336,6 +213,76 @@ const projects = {
 
   },
 
+
+  threadspace: {
+    id: 'threadspace',
+    title: 'ThreadSpace — VR Prototyping',
+    hoverTitle: 'VR Prototyping',
+    timeline: '2024',
+    keywords: 'Instructional Design, Virtual Reality',
+    softwares: 'Figma, Blender',
+    //tagline: 'Upcycle, stitch, and style— give your old clothes a second chance',
+    image: 'images/threadspace.jpg',
+    description: 'ThreadSpace is a VR experience that reimagines how people engage with upcycling and textile crafts. Users step into an immersive workshop environment where they can stitch, cut, and redesign garments using intuitive hand-tracked interactions. The project explores how spatial computing can make sustainable fashion accessible and joyful.',
+    content: [
+      { type: 'quote', text: 'Upcycle, stitch, and style- give your old clothes a second chance' },
+      { type: 'image', src: 'projects/threadspace/images/tscoverlight.jpg' },// caption: 'Early interface sketches' },
+      { type: 'centerheading', text: 'An intuitive, immersive environment for players to explore sewing basics, select tools, and create custom items like wrist warmers and much more.' },
+      { type: 'spacing', space: 16 },
+      { type: 'imagestretch', src: 'projects/threadspace/images/designprocess.jpg' },// caption: 'Early interface sketches' },      
+      { type: 'spacing', space: 32 },
+      { type: 'card', class: 'color-threadsp', title: 'Problem Space', text: 'Learning to sew shouldn’t feel like watching from the sidelines. Yet most platforms reduce making to steps on a screen.' },
+      { type: 'spacing', space: 16 },
+      { type: 'heading', level: 3, text: 'Bridging the Gaps' },
+      {
+        type: 'list', ordered: false, items: ['Expanding beyond basic projects with a diverse range of creative, meaningful upcycling experiences.',
+          'Embedding sustainability at the core- not as a feature, but as a philosophy.',
+          'Replacing rigid, passive instructions with immersive, hands-on control and guided interaction.',
+          'Delivering contextual tips in real time to support confident making.'
+        ]
+      },
+      { type: 'spacing', space: 16 },
+      { type: 'image', src: 'projects/threadspace/images/moodboard.jpg', caption: 'Moodboard & Environment Design Reference' },
+      { type: 'spacing', space: 16 },
+      { type: 'heading', text: 'Inside the Experience' },
+      {
+        type: 'list', ordered: false, items: [
+
+          'Hands-On Foundations - Learn essential skills like cutting, stitching, and thread matching through guided, interactive practice — not passive watching.',
+          'Playful Tool Exploration- Experiment with needles, stitch types, and materials in a safe, exploratory environment.',
+          'Project-Based Learning- Create functional pieces such as mini oven mitts, coin pouches, wrist warmers, and beyond.',
+          'Immersive Studio Desk- Work within a cozy, interactive sewing space designed to feel tactile and grounded.',
+          'Progressive Skill Building- Gradually unlock advanced creations like patchwork buckets and fabric trays as your confidence grows.',]
+      },
+
+      { type: 'spacing', space: 16 },
+      { type: 'imagebig', src: 'projects/threadspace/images/taskflow.jpg' },
+      { type: 'spacing', space: 32 },
+      { type: 'imagebig', src: 'projects/threadspace/images/IA.jpg', caption: 'Information Architecture' },
+      { type: 'spacing', space: 48 },
+      { type: 'imagebig', src: 'projects/threadspace/images/wireframing.png', caption: 'Wireframing' },
+      { type: 'spacing', space: 32 },
+      { type: 'imagebig', src: 'projects/threadspace/images/UI Kit.png' },
+      { type: 'spacing', space: 16 },
+      { type: 'gallery2', images: ['projects/threadspace/images/VR Guidelines.jpg', 'projects/threadspace/images/environment.jpg'], columns: 2 },
+      { type: 'centertext', text: 'The VR layout follows a clear spatial grid, positioning key elements within comfortable viewing zones for intuitive interaction. A diegetic desk workspace sits at torso level, with tools placed upfront, projects slightly to the right, and the guiding avatar gently positioned to the left- creating a balanced and immersive making environment.' },
+      { type: 'imagemedium', src: 'projects/threadspace/images/avatar.jpg', caption: '3D Avatar Design in Blender' },
+      { type: 'centerheading', text: 'Microinteractions' },
+      { type: 'centertext', text: 'Every action responds — from subtle haptic cues to visual highlights that affirm correct movements. Small feedback moments transform each step into a satisfying, confidence-building win.' },
+      { type: 'imagemedium', src: 'projects/threadspace/images/HE.jpg', caption: 'Usability Evaluation' },
+      { type: 'centerheading', text: 'Video Prototype' },
+      //{type: 'video', src: 'projects/threadspace/images/ts_vid.mp4' },
+      {
+        type: 'youtube',
+        src: 'https://www.youtube.com/embed/GN2DhsocK5g?si=IxPScbYoN542w47B'
+      },
+      { type: 'spacing', space: 32 },
+      { type: 'centerheading', text: 'Immersive Making, Reimagined' },
+      { type: 'spacing', space: 64 }
+    ]
+  },
+
+
   aakara: {
     id: 'aakara',
     title: 'Aakara — Board Game Design',
@@ -431,6 +378,8 @@ const projects = {
       { type: 'image', src: 'projects/visual/elle2.jpeg', caption: 'When Ori meets Arriety' },
       //{type: 'image', src: 'projects/visual/elle2.jpeg' },
       { type: 'image', src: 'projects/visual/elle7.jpeg', caption: 'Quick Ideation for environment and level design' },
+      { type: 'image', src: 'projects/visual/forest.jpg', caption: 'Forest Camp environment Concept' },
+      { type: 'image', src: 'projects/visual/forest1.jpg' },
       { type: 'image', src: 'projects/visual/elle4.jpeg', caption: 'Prop Design ideation' },
 
       //arena
@@ -457,14 +406,13 @@ const projects = {
     softwares: 'After Effects, Figma, Blender',
     //tagline: 'Selected experiments in motion and interactive UI.',
     image: 'images/ui-folio.jpg',
-    //layout: 'wide',
+    layout: 'wide',
     content: [
       { type: 'youtube', src: 'https://www.youtube.com/embed/N-5--dIyfCI?si=6hWTTdCyZd4fOmxa' },
       { type: 'spacing', space: 32 },
       { type: 'youtube', src: 'https://www.youtube.com/embed/DDomDkabLE8?si=R58QE9Q9hvZeUBZ8' },
       { type: 'spacing', space: 16 },
-      { type: 'image', src: 'projects/uifolio/roopmenu.jpg' },
-      { type: 'gallery2', images: ['projects/uifolio/roopsettings.jpg', 'projects/uifolio/roopload.jpg'], columns: 2 },
+      { type: 'video', src: 'projects/uifolio/doro_2.mp4' },
       { type: 'imagemedium', src: 'projects/uifolio/gassygus.jpg' },
       { type: 'gallery3', images: ['projects/uifolio/linkedin.jpg', 'projects/uifolio/sweet.jpg', 'projects/uifolio/cafe.jpg'], columns: 3 },
       //{type: 'spacing', space: 16 },
