@@ -615,9 +615,24 @@ const essays = [
   }
 ];
 
+// Reviews shown across tabs
+const reviews = [
+  {
+    text: "Sanya is always eager to learn new aspects and take on assignments with high-pressure deadlines. She truly is a multi-tasker. She knows how to prioritize things. An example of this would be how easily she juggled from one category of the poster to the next. She would deliver all work ahead of schedule and her honesty about the product and the will to improvise on the product she was working too were really helpful.",
+    author: "-Kanishk Kumar Medhavi",
+    role: "Lead organiser, TEDxAIIMSPatna"
+  },
+  {
+    text: "Sanya's dedication, creativity, and technical acumen were instrumental in contributing to our projects at Thorr Collective. We believe her contributions reflect her strong commitment to excellence in game design and development.",
+    author: "-Mimansha Charan",
+    role: "Co-founder, Thorr Collective"
+  }
+];
+
 // Make projects and artworks available globally
 window.portfolioData = {
   projects,
   artworks,
-  essays
+  essays,
+  reviews
 };

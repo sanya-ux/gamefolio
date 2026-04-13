@@ -8,7 +8,25 @@
 
 // Wait for DOM and data to load
 document.addEventListener('DOMContentLoaded', () => {
+  // Prevent browser from restoring previous scroll position
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+
   initPortfolio();
+
+  // Add scrolled class to header
+  const header = document.querySelector('header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  }
 });
 
 function initPortfolio() {
@@ -16,6 +34,7 @@ function initPortfolio() {
   const projects = window.portfolioData?.projects || {};
   const artworks = window.portfolioData?.artworks || {};
   const essays = window.portfolioData?.essays || [];
+  const reviews = window.portfolioData?.reviews || [];
 
   // Render projects grid in Work tab
   renderProjectsGrid(projects);
@@ -26,10 +45,42 @@ function initPortfolio() {
   // Render essays section in Work tab
   renderEssays(essays);
 
+  // Render reviews across tabs
+  renderReviews(reviews);
+
   // Initialize other functionality
   initModal();
   initTabs();
   initThemeToggle();
+}
+
+// Render Reviews section across tabs
+function renderReviews(reviews) {
+  const lists = document.querySelectorAll('.reviews-list');
+  if (!lists.length) return;
+
+  if (!reviews || reviews.length === 0) {
+    lists.forEach(list => {
+      const section = list.closest('.reviews-section');
+      if (section) section.style.display = 'none';
+      list.innerHTML = '';
+    });
+    return;
+  }
+
+  const reviewsHTML = reviews.map(review => `
+    <div class="review-card">
+      <p class="review-text">"${review.text}"</p>
+      <div class="review-meta">
+        <p class="review-author">${review.author}</p>
+        <p class="review-role">${review.role}</p>
+      </div>
+    </div>
+  `).join('');
+
+  lists.forEach(list => {
+    list.innerHTML = reviewsHTML;
+  });
 }
 
 function renderProjectsGrid(projects) {
@@ -47,9 +98,21 @@ function renderProjectsGrid(projects) {
   grid.innerHTML = '';
 
   // Loop through projects and create cards
-  projectArray.forEach(item => {
+  let currentSlot = 0;
+  projectArray.forEach((item, index) => {
     const card = document.createElement('div');
     card.className = 'card';
+
+    // Calculate row for staggered animation so pairs appear together
+    const animDuration = 0.35; // Match CSS animation duration so rows wait for the previous to complete
+    const slotsNeeded = item.layout === 'wide' ? 2 : 1;
+    if (slotsNeeded === 2 && currentSlot % 2 !== 0) {
+      currentSlot += 1;
+    }
+    const currentRow = Math.floor(currentSlot / 2);
+    card.style.animationDelay = `${currentRow * animDuration}s`;
+    currentSlot += slotsNeeded;
+
     if (item.layout === 'wide') {
       card.classList.add('card-wide');
     }
@@ -352,6 +415,12 @@ function openModal(projectKey) {
 
       case 'imagestretch':
         return `<figure class="modal-block-imagestretch${customClass}"><img src="${block.src}" alt="${block.caption || ''}" loading="lazy" />${block.caption ? `<figcaption>${block.caption}</figcaption>` : ''}</figure>`;
+
+      case 'imagebg': {
+        const bgContent = (block.content || []).map(b => renderBlock(b)).join('');
+        const opacityStyle = block.opacity !== undefined ? `--bg-opacity: ${block.opacity};` : '';
+        return `<div class="modal-block-imagebg${customClass}" style="background-image: url('${block.src}'); ${opacityStyle}"><div class="modal-imagebg-overlay"></div><div class="modal-imagebg-content">${bgContent}</div></div>`;
+      }
 
       case 'imagebig':
         return `<figure class="modal-block-imagebig${customClass}"><img src="${block.src}" alt="${block.caption || ''}" loading="lazy" />${block.caption ? `<figcaption>${block.caption}</figcaption>` : ''}</figure>`;
